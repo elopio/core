@@ -24,6 +24,10 @@ parts:
     plugin: nodejs
     source: https://github.com/c9/c9.ide.run.git
     source-type: git
+  htterror:
+    plugin: nodejs
+    source: https://github.com/c9/node-http-error.git
+    source-type: git
   c9iderunbuild:
     plugin: nodejs
     source: https://github.com/c9/c9.ide.run.build.git
