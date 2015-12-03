@@ -9,7 +9,7 @@
         "type": "git",
         "url": "http://github.com/c9/core.git"
     },
-    "revision": "test"
+    "revision": "test",
     "dependencies": {
         "acorn": "2.5.2",
         "async": "^0.9.0",
