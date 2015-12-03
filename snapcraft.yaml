@@ -20,3 +20,13 @@ parts:
     plugin: copy
     files:
       build/ubuntu/cloud9.sh: bin/cloud9.sh
+  c9iderun:
+    plugin: nodejs
+    source: git@github.com:c9/c9.ide.run.git
+  c9ideruncopy:
+    after:
+      - cloud9
+      - c9iderun
+    plugin: copy
+    files:
+      parts/c9iderun/src: lib/node_modules/c9/plugins/c9.ide.run
