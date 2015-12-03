@@ -28,11 +28,17 @@ parts:
     plugin: nodejs
     source: https://github.com/c9/c9.ide.run.build.git
     source-type: git
+  connectarchitect:
+    plugin: nodejs
+    source: https://github.com/c9/connect-architect.git
+    source-type: git
   pluginscopy:
     after:
       - c9iderun
       - c9iderunbuild
+      - connectarchitect
     plugin: copy
     files:
       parts/c9iderun/src: lib/node_modules/c9/plugins/c9.ide.run
       parts/c9iderunbuild/src: lib/node_modules/c9/plugins/c9.ide.run.build
+      parts/connectarchitect/src: lib/node_modules/c9/plugins/connect-architect
