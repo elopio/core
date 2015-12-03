@@ -1,0 +1,22 @@
+name: cloud9
+version: 3.0
+vendor: Leo Arias <elopio@ubuntu.com>
+summary: A powerful online code editor
+description: |
+  Cloud9 provides a development environment in the cloud that allows developers
+  to get started with coding immediately and collaborate with their peers.
+icon: build/ubuntu/icon.png
+
+services:
+  server:
+    start: bin/cloud9.sh
+    descrition: cloud9 IDE
+
+parts:
+  cloud9:
+    plugin: nodejs
+    source: .
+  wrapper:
+    plugin: copy
+    files:
+      build/ubuntu/cloud9.sh: bin/cloud9.sh
