@@ -22,8 +22,9 @@ parts:
       build/ubuntu/cloud9.sh: bin/cloud9.sh
   c9iderun:
     plugin: nodejs
-    source: git@github.com:c9/c9.ide.run.git
-  c9ideruncopy:
+    source: https://github.com/c9/c9.ide.run.git
+    source-type: git
+  c9runcopy:
     after:
       - cloud9
       - c9iderun
