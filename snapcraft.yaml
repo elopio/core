@@ -24,10 +24,15 @@ parts:
     plugin: nodejs
     source: https://github.com/c9/c9.ide.run.git
     source-type: git
-  c9runcopy:
+  c9iderunbuild:
+    plugin: nodejs
+    source: https://github.com/c9/c9.ide.run.build.git
+    source-type: git
+  pluginscopy:
     after:
-      - cloud9
       - c9iderun
+      - c9iderunbuild
     plugin: copy
     files:
       parts/c9iderun/src: lib/node_modules/c9/plugins/c9.ide.run
+      parts/c9iderunbuild/src: lib/node_modules/c9/plugins/c9.ide.run.build
